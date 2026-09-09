@@ -8,7 +8,8 @@
     "scheme": "pavneetportfolio",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "icon": "./assets/expo.icon"
+      "icon": "./assets/expo.icon",
+      "bundleIdentifier": "com.pavneetkour.PavneetPortfolio"
     },
     "android": {
       "adaptiveIcon": {
