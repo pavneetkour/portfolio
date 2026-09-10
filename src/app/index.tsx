@@ -1,62 +1,91 @@
-import * as Device from 'expo-device';
-import { Platform, StyleSheet } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { ScrollView, StyleSheet, View } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-import { AnimatedIcon } from '@/components/animated-icon';
-import { HintRow } from '@/components/hint-row';
+import { ContactLinks } from '@/components/portfolio/contact-links';
+import { SectionHeader } from '@/components/portfolio/section-header';
+import { SkillChips } from '@/components/portfolio/skill-chips';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
-import { WebBadge } from '@/components/web-badge';
+import {
+  ACHIEVEMENTS,
+  EDUCATION,
+  PROFILE,
+  SKILLS,
+} from '@/constants/portfolio';
 import { BottomTabInset, MaxContentWidth, Spacing } from '@/constants/theme';
 
-function getDevMenuHint() {
-  if (Platform.OS === 'web') {
-    return <ThemedText type="small">use browser devtools</ThemedText>;
-  }
-  if (Device.isDevice) {
-    return (
-      <ThemedText type="small">
-        shake device or press <ThemedText type="code">m</ThemedText> in terminal
-      </ThemedText>
-    );
-  }
-  const shortcut = Platform.OS === 'android' ? 'cmd+m (or ctrl+m)' : 'cmd+d';
-  return (
-    <ThemedText type="small">
-      press <ThemedText type="code">{shortcut}</ThemedText>
-    </ThemedText>
-  );
-}
+export default function AboutScreen() {
+  const insets = useSafeAreaInsets();
 
-export default function HomeScreen() {
   return (
     <ThemedView style={styles.container}>
-      <SafeAreaView style={styles.safeArea}>
-        <ThemedView style={styles.heroSection}>
-          <AnimatedIcon />
-          <ThemedText type="title" style={styles.title}>
-            Welcome to&nbsp;Expo
-          </ThemedText>
-        </ThemedView>
+      <ScrollView
+        contentContainerStyle={[
+          styles.scrollContent,
+          {
+            paddingTop: insets.top + Spacing.three,
+            paddingBottom: insets.bottom + BottomTabInset + Spacing.five,
+          },
+        ]}
+        showsVerticalScrollIndicator={false}>
+        <View style={styles.content}>
+          <View style={styles.hero}>
+            <ThemedText type="caption" themeColor="accent">
+              Hi, I&apos;m
+            </ThemedText>
+            <ThemedText type="title">{PROFILE.name}</ThemedText>
+            <ThemedText type="subtitle" themeColor="accent">
+              {PROFILE.title}
+            </ThemedText>
+            <ThemedText type="caption" themeColor="textSecondary" style={styles.tagline}>
+              React Native Developer · 6+ years building mobile apps
+            </ThemedText>
+          </View>
 
-        <ThemedText type="code" style={styles.code}>
-          get started
-        </ThemedText>
+          <ContactLinks />
 
-        <ThemedView type="backgroundElement" style={styles.stepContainer}>
-          <HintRow
-            title="Try editing"
-            hint={<ThemedText type="code">src/app/index.tsx</ThemedText>}
-          />
-          <HintRow title="Dev tools" hint={getDevMenuHint()} />
-          <HintRow
-            title="Fresh start"
-            hint={<ThemedText type="code">npm run reset-project</ThemedText>}
-          />
-        </ThemedView>
+          <View style={styles.section}>
+            <SectionHeader title="Summary" />
+            <ThemedText type="caption" style={styles.bodyText}>
+              {PROFILE.summary}
+            </ThemedText>
+          </View>
 
-        {Platform.OS === 'web' && <WebBadge />}
-      </SafeAreaView>
+          <View style={styles.section}>
+            <SectionHeader title="Skills" />
+            <SkillChips skills={SKILLS} />
+          </View>
+
+          <View style={styles.section}>
+            <SectionHeader title="Achievements" />
+            <View style={styles.list}>
+              {ACHIEVEMENTS.map((item) => (
+                <View key={item} style={styles.listRow}>
+                  <ThemedText type="caption" themeColor="accent">
+                    •
+                  </ThemedText>
+                  <ThemedText type="caption" style={styles.listText}>
+                    {item}
+                  </ThemedText>
+                </View>
+              ))}
+            </View>
+          </View>
+
+          <View style={styles.section}>
+            <SectionHeader title="Education" />
+            <ThemedView type="backgroundElement" style={styles.educationCard}>
+              <ThemedText type="smallBold">{EDUCATION.school}</ThemedText>
+              <ThemedText type="caption" themeColor="accent">
+                {EDUCATION.degree}
+              </ThemedText>
+              <ThemedText type="caption" themeColor="textSecondary">
+                {EDUCATION.period}
+              </ThemedText>
+            </ThemedView>
+          </View>
+        </View>
+      </ScrollView>
     </ThemedView>
   );
 }
@@ -64,35 +93,44 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    flexDirection: 'row',
   },
-  safeArea: {
-    flex: 1,
-    paddingHorizontal: Spacing.four,
+  scrollContent: {
     alignItems: 'center',
-    gap: Spacing.three,
-    paddingBottom: BottomTabInset + Spacing.three,
+    paddingHorizontal: Spacing.four,
+  },
+  content: {
+    width: '100%',
     maxWidth: MaxContentWidth,
+    gap: Spacing.five,
   },
-  heroSection: {
-    alignItems: 'center',
-    justifyContent: 'center',
+  hero: {
+    gap: Spacing.two,
+    paddingBottom: Spacing.two,
+  },
+  tagline: {
+    marginTop: Spacing.one,
+  },
+  section: {
+    gap: Spacing.two,
+  },
+  bodyText: {
+    lineHeight: 22,
+  },
+  list: {
+    gap: Spacing.two,
+  },
+  listRow: {
+    flexDirection: 'row',
+    gap: Spacing.two,
+    alignItems: 'flex-start',
+  },
+  listText: {
     flex: 1,
-    paddingHorizontal: Spacing.four,
-    gap: Spacing.four,
+    lineHeight: 20,
   },
-  title: {
-    textAlign: 'center',
-  },
-  code: {
-    textTransform: 'uppercase',
-  },
-  stepContainer: {
-    gap: Spacing.three,
-    alignSelf: 'stretch',
-    paddingHorizontal: Spacing.three,
-    paddingVertical: Spacing.four,
-    borderRadius: Spacing.four,
+  educationCard: {
+    padding: Spacing.three,
+    borderRadius: Spacing.three,
+    gap: Spacing.one,
   },
 });
