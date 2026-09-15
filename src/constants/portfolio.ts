@@ -15,7 +15,6 @@ export const QUICK_SKILLS = ['React Native', 'TypeScript', 'GraphQL'];
 
 export const WHAT_I_BRING = [
   '6+ years of React Native development',
-  'React.js & TypeScript expertise',
   'Experience across multiple domains (dating, healthcare, ride-sharing, grocery, delivery, e-commerce)',
   'Strong problem-solving and clean, maintainable code',
   'Agile & scrum practices for on-time delivery',
