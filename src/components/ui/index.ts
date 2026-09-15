@@ -1,4 +1,5 @@
 import { GradientButton, OutlineButton } from "./button";
+import { Card } from "./card";
 import { CheckItem } from "./checkItem";
 import { PillTag } from "./pillTag";
 import { ProfileAvatar } from "./profileAvatar";
@@ -9,7 +10,7 @@ import { SocialLinks } from "./socialLinks";
 
 
 export {
-  CheckItem,
+  Card, CheckItem,
   GradientButton,
   OutlineButton,
   PillTag,
