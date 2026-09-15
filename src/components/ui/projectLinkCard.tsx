@@ -49,9 +49,11 @@ export function ProjectLinkCard({
             <Ionicons name="chevron-forward" size={18} color={theme.textSecondary} />
           </View>
           <View style={styles.projectTags}>
-            {stack.slice(0, 3).map((tag) => (
-              <PillTag key={tag} label={tag} />
-            ))}
+            {
+              stack.slice(0, 3).map((tag) => (
+                <PillTag key={tag} label={tag} />
+              ))
+            }
           </View>
         </Card>
       </Pressable>
