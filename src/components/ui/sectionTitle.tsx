@@ -21,5 +21,8 @@ export function SectionTitle({ title, subtitle }: { title: string; subtitle?: st
 
 
 const styles = StyleSheet.create({
-  sectionTitle: { gap: Spacing.one, marginBottom: Spacing.two },
+  sectionTitle: {
+    gap: Spacing.one,
+    marginBottom: Spacing.two
+  },
 });
