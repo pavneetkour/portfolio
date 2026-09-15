@@ -3,6 +3,7 @@ import { Card } from "./card";
 import { CheckItem } from "./checkItem";
 import { PillTag } from "./pillTag";
 import { ProfileAvatar } from "./profileAvatar";
+import { ProjectLinkCard } from "./projectLinkCard";
 import { ScreenHeader } from "./screenHeader";
 import { ScreenScroll } from "./screenScroll";
 import { SectionTitle } from "./sectionTitle";
@@ -15,6 +16,7 @@ export {
   OutlineButton,
   PillTag,
   ProfileAvatar,
+  ProjectLinkCard,
   ScreenHeader,
   ScreenScroll,
   SectionTitle,
