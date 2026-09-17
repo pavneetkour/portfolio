@@ -1,0 +1,38 @@
+# Package files
+package.json
+package-lock.json
+yarn.lock
+
+# Generated files
+src/__generated__/
+**/*.generated.*
+
+# Build files
+build/
+dist/
+.expo/
+
+# GitHub
+.github/
+
+# Config files
+*.config.js
+*.config.ts
+eslint.config.js
+.eslintrc.js
+babel.config.js
+metro.config.js
+codegen.ts
+tsconfig.json
+prettierrc.json
+eas.json
+app.config.ts
+app.json
+ReactotronConfig.js
+
+# Node modules
+node_modules/
+
+# Other
+*.log
+.DS_Store 

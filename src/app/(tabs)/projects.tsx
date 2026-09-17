@@ -1,8 +1,13 @@
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View } from "react-native";
 
-import { ProjectLinkCard, ScreenHeader, ScreenScroll, SectionTitle } from '@/components/ui';
-import { PROJECTS } from '@/constants/portfolio';
-import { Spacing } from '@/constants/theme';
+import {
+  ProjectLinkCard,
+  ScreenHeader,
+  ScreenScroll,
+  SectionTitle,
+} from "@/components/ui";
+import { PROJECTS } from "@/constants/portfolio";
+import { Spacing } from "@/constants/theme";
 
 export default function ProjectsScreen() {
   return (

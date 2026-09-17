@@ -1,15 +1,11 @@
-import { Ionicons } from '@expo/vector-icons';
-import {
-  StyleSheet,
-  View
-} from 'react-native';
+import { Ionicons } from "@expo/vector-icons";
+import { StyleSheet, View } from "react-native";
 
-import { ThemedText } from '@/components/themed-text';
-import { Spacing } from '@/constants/theme';
-import { useTheme } from '@/hooks/use-theme';
+import { ThemedText } from "@/components/themed-text";
+import { Spacing } from "@/constants/theme";
+import { useTheme } from "@/hooks/use-theme";
 
-
-export function CheckItem({ text }: { text: string; }) {
+export function CheckItem({ text }: { text: string }) {
   const theme = useTheme();
   return (
     <View style={styles.checkRow}>
@@ -21,9 +17,11 @@ export function CheckItem({ text }: { text: string; }) {
   );
 }
 
-
 const styles = StyleSheet.create({
-
-  checkRow: { flexDirection: 'row', gap: Spacing.two, alignItems: 'flex-start' },
+  checkRow: {
+    flexDirection: "row",
+    gap: Spacing.two,
+    alignItems: "flex-start",
+  },
   checkText: { flex: 1, lineHeight: 20 },
 });

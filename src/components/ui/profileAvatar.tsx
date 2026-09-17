@@ -1,14 +1,15 @@
-import {
-  StyleSheet,
-  View
-} from 'react-native';
+import { StyleSheet, View } from "react-native";
 
-import { ThemedText } from '@/components/themed-text';
+import { ThemedText } from "@/components/themed-text";
 
-
-export function ProfileAvatar({ size = 88 }: { size?: number; }) {
+export function ProfileAvatar({ size = 88 }: { size?: number }) {
   return (
-    <View style={[styles.avatar, { width: size, height: size, borderRadius: size / 2 }]}>
+    <View
+      style={[
+        styles.avatar,
+        { width: size, height: size, borderRadius: size / 2 },
+      ]}
+    >
       <ThemedText type="title" style={styles.avatarText}>
         PK
       </ThemedText>
@@ -17,14 +18,13 @@ export function ProfileAvatar({ size = 88 }: { size?: number; }) {
 }
 
 const styles = StyleSheet.create({
-
   avatar: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    experimental_backgroundImage: 'linear-gradient(135deg, #7B61FF, #5B8DEF)',
+    alignItems: "center",
+    justifyContent: "center",
+    experimental_backgroundImage: "linear-gradient(135deg, #7B61FF, #5B8DEF)",
   },
   avatarText: {
-    color: '#FFFFFF',
-    fontSize: 28
+    color: "#FFFFFF",
+    fontSize: 28,
   },
 });

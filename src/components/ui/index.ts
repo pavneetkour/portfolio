@@ -9,9 +9,9 @@ import { ScreenScroll } from "./screenScroll";
 import { SectionTitle } from "./sectionTitle";
 import { SocialLinks } from "./socialLinks";
 
-
 export {
-  Card, CheckItem,
+  Card,
+  CheckItem,
   GradientButton,
   OutlineButton,
   PillTag,
@@ -20,6 +20,5 @@ export {
   ScreenHeader,
   ScreenScroll,
   SectionTitle,
-  SocialLinks
+  SocialLinks,
 };
- 

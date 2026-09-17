@@ -1,12 +1,15 @@
-import {
-  StyleSheet,
-  View,
-} from 'react-native';
+import { StyleSheet, View } from "react-native";
 
-import { ThemedText } from '@/components/themed-text';
-import { Spacing } from '@/constants/theme';
+import { ThemedText } from "@/components/themed-text";
+import { Spacing } from "@/constants/theme";
 
-export function SectionTitle({ title, subtitle }: { title: string; subtitle?: string; }) {
+export function SectionTitle({
+  title,
+  subtitle,
+}: {
+  title: string;
+  subtitle?: string;
+}) {
   return (
     <View style={styles.sectionTitle}>
       <ThemedText type="subtitle">{title}</ThemedText>
@@ -19,10 +22,9 @@ export function SectionTitle({ title, subtitle }: { title: string; subtitle?: st
   );
 }
 
-
 const styles = StyleSheet.create({
   sectionTitle: {
     gap: Spacing.one,
-    marginBottom: Spacing.two
+    marginBottom: Spacing.two,
   },
 });

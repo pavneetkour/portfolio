@@ -1,9 +1,9 @@
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View } from "react-native";
 
-import { ThemedText } from '@/components/themed-text';
-import { ThemedView } from '@/components/themed-view';
-import { Project } from '@/constants/portfolio';
-import { Spacing } from '@/constants/theme';
+import { ThemedText } from "@/components/themed-text";
+import { ThemedView } from "@/components/themed-view";
+import { Project } from "@/constants/portfolio";
+import { Spacing } from "@/constants/theme";
 
 type Props = {
   project: Project;
@@ -48,9 +48,9 @@ const styles = StyleSheet.create({
     marginTop: Spacing.one,
   },
   row: {
-    flexDirection: 'row',
+    flexDirection: "row",
     gap: Spacing.two,
-    alignItems: 'flex-start',
+    alignItems: "flex-start",
   },
   highlightText: {
     flex: 1,

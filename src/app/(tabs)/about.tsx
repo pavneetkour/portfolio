@@ -1,9 +1,16 @@
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View } from "react-native";
 
-import { ThemedText } from '@/components/themed-text';
-import { Card, CheckItem, ProfileAvatar, ScreenHeader, ScreenScroll, SectionTitle } from '@/components/ui';
-import { EDUCATION, PROFILE, WHAT_I_BRING } from '@/constants/portfolio';
-import { Spacing } from '@/constants/theme';
+import { ThemedText } from "@/components/themed-text";
+import {
+  Card,
+  CheckItem,
+  ProfileAvatar,
+  ScreenHeader,
+  ScreenScroll,
+  SectionTitle,
+} from "@/components/ui";
+import { EDUCATION, PROFILE, WHAT_I_BRING } from "@/constants/portfolio";
+import { Spacing } from "@/constants/theme";
 
 export default function AboutScreen() {
   return (
@@ -21,7 +28,11 @@ export default function AboutScreen() {
       </View>
 
       <Card>
-        <ThemedText type="caption" themeColor="textSecondary" style={styles.summary}>
+        <ThemedText
+          type="caption"
+          themeColor="textSecondary"
+          style={styles.summary}
+        >
           {PROFILE.summary}
         </ThemedText>
       </Card>
@@ -48,7 +59,11 @@ export default function AboutScreen() {
 }
 
 const styles = StyleSheet.create({
-  profile: { alignItems: 'center', gap: Spacing.two, marginBottom: Spacing.two },
+  profile: {
+    alignItems: "center",
+    gap: Spacing.two,
+    marginBottom: Spacing.two,
+  },
   name: { fontSize: 26 },
   summary: { lineHeight: 22 },
   checklist: { gap: Spacing.three },
