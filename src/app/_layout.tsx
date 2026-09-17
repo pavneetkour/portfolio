@@ -16,8 +16,7 @@ export default function RootLayout() {
         screenOptions={{
           headerShown: false,
           contentStyle: { backgroundColor: "#0A0B10" },
-        }}
-      >
+        }}>
         <Stack.Screen
           name="project/[id]"
           options={{ animation: "slide_from_right", presentation: "card" }}

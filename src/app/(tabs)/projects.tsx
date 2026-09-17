@@ -1,11 +1,6 @@
 import { StyleSheet, View } from "react-native";
 
-import {
-  ProjectLinkCard,
-  ScreenHeader,
-  ScreenScroll,
-  SectionTitle,
-} from "@/components/ui";
+import { ProjectLinkCard, ScreenHeader, ScreenScroll, SectionTitle } from "@/components/ui";
 import { PROJECTS } from "@/constants/portfolio";
 import { Spacing } from "@/constants/theme";
 
@@ -36,5 +31,7 @@ export default function ProjectsScreen() {
 }
 
 const styles = StyleSheet.create({
-  list: { gap: Spacing.three },
+  list: {
+    gap: Spacing.three
+  },
 });

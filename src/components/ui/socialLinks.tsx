@@ -20,11 +20,7 @@ export function SocialLinks({ centered }: { centered?: boolean }) {
         <Pressable
           key={link.icon}
           onPress={() => Linking.openURL(link.url)}
-          style={[
-            styles.socialBtn,
-            { backgroundColor: theme.backgroundElement },
-          ]}
-        >
+          style={[styles.socialBtn, { backgroundColor: theme.backgroundElement }]}>
           <Ionicons name={link.icon} size={20} color={theme.text} />
         </Pressable>
       ))}

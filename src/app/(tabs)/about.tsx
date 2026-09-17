@@ -28,11 +28,7 @@ export default function AboutScreen() {
       </View>
 
       <Card>
-        <ThemedText
-          type="caption"
-          themeColor="textSecondary"
-          style={styles.summary}
-        >
+        <ThemedText type="caption" themeColor="textSecondary" style={styles.summary}>
           {PROFILE.summary}
         </ThemedText>
       </Card>

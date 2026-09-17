@@ -31,51 +31,40 @@ export default function TabLayout() {
           fontSize: 11,
           fontWeight: "600",
         },
-      }}
-    >
+      }}>
       <Tabs.Screen
         name="index"
         options={{
           title: "Home",
-          tabBarIcon: ({ color }) => (
-            <TabIcon name="home-outline" color={color} />
-          ),
+          tabBarIcon: ({ color }) => <TabIcon name="home-outline" color={color} />,
         }}
       />
       <Tabs.Screen
         name="projects"
         options={{
           title: "Projects",
-          tabBarIcon: ({ color }) => (
-            <TabIcon name="grid-outline" color={color} />
-          ),
+          tabBarIcon: ({ color }) => <TabIcon name="grid-outline" color={color} />,
         }}
       />
       <Tabs.Screen
         name="about"
         options={{
           title: "About",
-          tabBarIcon: ({ color }) => (
-            <TabIcon name="person-outline" color={color} />
-          ),
+          tabBarIcon: ({ color }) => <TabIcon name="person-outline" color={color} />,
         }}
       />
       <Tabs.Screen
         name="tech"
         options={{
           title: "Tech",
-          tabBarIcon: ({ color }) => (
-            <TabIcon name="code-slash-outline" color={color} />
-          ),
+          tabBarIcon: ({ color }) => <TabIcon name="code-slash-outline" color={color} />,
         }}
       />
       <Tabs.Screen
         name="more"
         options={{
           title: "More",
-          tabBarIcon: ({ color }) => (
-            <TabIcon name="ellipsis-horizontal-outline" color={color} />
-          ),
+          tabBarIcon: ({ color }) => <TabIcon name="ellipsis-horizontal-outline" color={color} />,
         }}
       />
     </Tabs>

@@ -23,8 +23,7 @@ export function ScreenScroll({
             paddingHorizontal: noPadding ? 0 : Spacing.three,
           },
         ]}
-        showsVerticalScrollIndicator={false}
-      >
+        showsVerticalScrollIndicator={false}>
         <View style={styles.content}>{children}</View>
       </ScrollView>
     </ThemedView>

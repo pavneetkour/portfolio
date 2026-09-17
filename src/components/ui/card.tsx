@@ -6,13 +6,7 @@ import { useTheme } from "@/hooks/use-theme";
 export function Card({ children, style }: ViewProps) {
   const theme = useTheme();
   return (
-    <View
-      style={[
-        styles.card,
-        { backgroundColor: theme.card, borderColor: theme.border },
-        style,
-      ]}
-    >
+    <View style={[styles.card, { backgroundColor: theme.card, borderColor: theme.border }, style]}>
       {children}
     </View>
   );

@@ -15,10 +15,7 @@ export function GradientButton({
   icon?: keyof typeof Ionicons.glyphMap;
 }) {
   return (
-    <Pressable
-      onPress={onPress}
-      style={({ pressed }) => [pressed && styles.pressed]}
-    >
+    <Pressable onPress={onPress} style={({ pressed }) => [pressed && styles.pressed]}>
       <View style={styles.gradientBtn}>
         <ThemedText type="smallBold" style={styles.gradientBtnText}>
           {label}
@@ -29,19 +26,10 @@ export function GradientButton({
   );
 }
 
-export function OutlineButton({
-  label,
-  onPress,
-}: {
-  label: string;
-  onPress?: () => void;
-}) {
+export function OutlineButton({ label, onPress }: { label: string; onPress?: () => void }) {
   const theme = useTheme();
   return (
-    <Pressable
-      onPress={onPress}
-      style={({ pressed }) => [pressed && styles.pressed]}
-    >
+    <Pressable onPress={onPress} style={({ pressed }) => [pressed && styles.pressed]}>
       <View style={[styles.outlineBtn, { borderColor: theme.border }]}>
         <ThemedText type="smallBold">{label}</ThemedText>
       </View>

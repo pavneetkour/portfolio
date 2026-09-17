@@ -4,8 +4,7 @@ export const PROFILE = {
   title: "Software Engineer",
   phone: "+91-7006338870",
   email: "pavneetkour30@gmail.com",
-  tagline:
-    "6+ years of experience building scalable mobile applications for iOS & Android.",
+  tagline: "6+ years of experience building scalable mobile applications for iOS & Android.",
   summary:
     "Mobile App Developer with a proven track record of creating successful mobile applications. I use agile and scrum practices to ensure business deadlines are met. A leader, self-starter, constant learner, and problem solver.",
   github: "https://github.com/pavneetkour",
@@ -104,9 +103,7 @@ export const EXPERIENCE: Experience[] = [
     company: "Netsmartz",
     role: "Software Engineer",
     period: "Sept 2022 – Jan 2024",
-    highlights: [
-      "Delivered cross-platform mobile solutions for enterprise clients",
-    ],
+    highlights: ["Delivered cross-platform mobile solutions for enterprise clients"],
   },
   {
     company: "Netqom Solutions Pvt Ltd.",
@@ -185,8 +182,7 @@ export const PROJECTS: Project[] = [
     tags: ["Healthcare", "Staffing"],
     color: "#4ECDC4",
     emoji: "🏥",
-    description:
-      "Healthcare staffing platform connecting caregivers with healthcare facilities.",
+    description: "Healthcare staffing platform connecting caregivers with healthcare facilities.",
     highlights: [
       "Caregiver onboarding and profile management",
       "Facility matching and shift scheduling flows",
@@ -201,8 +197,7 @@ export const PROJECTS: Project[] = [
     tags: ["Transport", "Navigation", "Payments"],
     color: "#FFD93D",
     emoji: "🚗",
-    description:
-      "Driver app with trip management, navigation, payments, and earnings tracking.",
+    description: "Driver app with trip management, navigation, payments, and earnings tracking.",
     highlights: [
       "Live trip management and route navigation",
       "In-app payments and earnings dashboard",
@@ -210,8 +205,7 @@ export const PROJECTS: Project[] = [
     ],
     caseStudy: {
       title: "Location & Ride Management",
-      problem:
-        "Drivers needed reliable trip tracking, navigation, and payment reconciliation.",
+      problem: "Drivers needed reliable trip tracking, navigation, and payment reconciliation.",
       solution:
         "Integrated Google Maps with background location updates and a unified earnings module.",
       tech: ["Google Maps", "React Native", "REST APIs"],
@@ -257,8 +251,7 @@ export const PROJECTS: Project[] = [
     tags: ["Marketplace", "Reviews"],
     color: "#38BDF8",
     emoji: "⭐",
-    description:
-      "Contractor review platform helping homeowners find trusted professionals.",
+    description: "Contractor review platform helping homeowners find trusted professionals.",
     highlights: [
       "Verified contractor profiles and reviews",
       "Search and filter by service category",

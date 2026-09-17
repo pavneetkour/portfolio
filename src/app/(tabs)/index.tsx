@@ -1,11 +1,5 @@
 import { ThemedText } from "@/components/themed-text";
-import {
-  GradientButton,
-  OutlineButton,
-  PillTag,
-  ScreenScroll,
-  SocialLinks,
-} from "@/components/ui";
+import { GradientButton, OutlineButton, PillTag, ScreenScroll, SocialLinks } from "@/components/ui";
 import { PROFILE, QUICK_SKILLS } from "@/constants/portfolio";
 import { Spacing } from "@/constants/theme";
 import * as Linking from "expo-linking";
@@ -19,11 +13,7 @@ export default function HomeScreen() {
         <ThemedText type="title" style={styles.headline}>
           {PROFILE.headline}
         </ThemedText>
-        <ThemedText
-          type="caption"
-          themeColor="textSecondary"
-          style={styles.tagline}
-        >
+        <ThemedText type="caption" themeColor="textSecondary" style={styles.tagline}>
           {PROFILE.tagline}
         </ThemedText>
       </View>

@@ -4,12 +4,7 @@ import { ThemedText } from "@/components/themed-text";
 
 export function ProfileAvatar({ size = 88 }: { size?: number }) {
   return (
-    <View
-      style={[
-        styles.avatar,
-        { width: size, height: size, borderRadius: size / 2 },
-      ]}
-    >
+    <View style={[styles.avatar, { width: size, height: size, borderRadius: size / 2 }]}>
       <ThemedText type="title" style={styles.avatarText}>
         PK
       </ThemedText>

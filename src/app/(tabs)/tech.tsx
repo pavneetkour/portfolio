@@ -1,10 +1,5 @@
 import { ThemedText } from "@/components/themed-text";
-import {
-  Card,
-  ScreenHeader,
-  ScreenScroll,
-  SectionTitle,
-} from "@/components/ui";
+import { Card, ScreenHeader, ScreenScroll, SectionTitle } from "@/components/ui";
 import { TECH_CATEGORIES } from "@/constants/portfolio";
 import { Radius, Spacing } from "@/constants/theme";
 import { useTheme } from "@/hooks/use-theme";
@@ -26,12 +21,7 @@ export default function TechScreen() {
         {TECH_CATEGORIES.map((category) => (
           <Card key={category.title} style={styles.categoryCard}>
             <View style={styles.categoryHeader}>
-              <View
-                style={[
-                  styles.iconWrap,
-                  { backgroundColor: theme.accent + "18" },
-                ]}
-              >
+              <View style={[styles.iconWrap, { backgroundColor: theme.accent + "18" }]}>
                 <Ionicons
                   name={category.icon as keyof typeof Ionicons.glyphMap}
                   size={18}
@@ -43,9 +33,7 @@ export default function TechScreen() {
             <View style={styles.items}>
               {category.items.map((item) => (
                 <View key={item} style={styles.itemRow}>
-                  <View
-                    style={[styles.dot, { backgroundColor: theme.accent }]}
-                  />
+                  <View style={[styles.dot, { backgroundColor: theme.accent }]} />
                   <ThemedText type="caption">{item}</ThemedText>
                 </View>
               ))}

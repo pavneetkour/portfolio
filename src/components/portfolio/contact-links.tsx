@@ -32,8 +32,7 @@ export function ContactLinks() {
         <Pressable
           key={contact.label}
           onPress={() => Linking.openURL(contact.url)}
-          style={({ pressed }) => [pressed && styles.pressed]}
-        >
+          style={({ pressed }) => [pressed && styles.pressed]}>
           <ThemedView type="backgroundElement" style={styles.card}>
             <ThemedText type="caption" themeColor="textSecondary">
               {contact.label}

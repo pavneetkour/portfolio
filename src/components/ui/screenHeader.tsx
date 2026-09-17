@@ -5,21 +5,11 @@ import { Pressable, StyleSheet, View } from "react-native";
 import { ThemedText } from "@/components/themed-text";
 import { Spacing } from "@/constants/theme";
 
-export function ScreenHeader({
-  title,
-  showBack,
-}: {
-  title: string;
-  showBack?: boolean;
-}) {
+export function ScreenHeader({ title, showBack }: { title: string; showBack?: boolean }) {
   return (
     <View style={styles.header}>
       {showBack ? (
-        <Pressable
-          onPress={() => router.back()}
-          style={styles.backBtn}
-          hitSlop={12}
-        >
+        <Pressable onPress={() => router.back()} style={styles.backBtn} hitSlop={12}>
           <Ionicons name="chevron-back" size={22} color="#FFFFFF" />
         </Pressable>
       ) : (
