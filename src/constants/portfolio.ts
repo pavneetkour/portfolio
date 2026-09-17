@@ -8,7 +8,7 @@ export const PROFILE = {
   summary:
     'Mobile App Developer with a proven track record of creating successful mobile applications. I use agile and scrum practices to ensure business deadlines are met. A leader, self-starter, constant learner, and problem solver.',
   github: 'https://github.com/pavneetkour',
-  linkedin: 'https://linkedin.com/in/pavneetkour',
+  linkedin: 'https://www.linkedin.com/in/pavneet-kour-23010712b/',
 };
 
 export const QUICK_SKILLS = ['React Native', 'TypeScript', 'GraphQL'];
