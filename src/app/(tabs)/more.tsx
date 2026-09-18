@@ -1,16 +1,15 @@
 import { Ionicons } from "@expo/vector-icons";
 import * as Linking from "expo-linking";
-import { Alert, Pressable, StyleSheet, View } from "react-native";
+import { Pressable, StyleSheet, View } from "react-native";
 
 import { ThemedText } from "@/components/themed-text";
 import {
   Card,
   CheckItem,
-  GradientButton,
   ScreenHeader,
   ScreenScroll,
   SectionTitle,
-  SocialLinks,
+  SocialLinks
 } from "@/components/ui";
 import { ACHIEVEMENTS, ENGINEERING_HIGHLIGHTS, EXPERIENCE, PROFILE } from "@/constants/portfolio";
 import { Radius, Spacing } from "@/constants/theme";
@@ -48,10 +47,6 @@ function ContactRow({
 
 export default function MoreScreen() {
   const theme = useTheme();
-
-  const handleDownloadResume = async () => {
-    Alert.alert("Resume", "Add your PDF to assets/resume.pdf to enable download.");
-  };
 
   return (
     <ScreenScroll>
@@ -101,22 +96,6 @@ export default function MoreScreen() {
         {ACHIEVEMENTS.map((item) => (
           <CheckItem key={item} text={item} />
         ))}
-      </Card>
-
-      <SectionTitle title="Resume" />
-      <Card style={styles.resumeCard}>
-        <View style={styles.resumeRow}>
-          <View style={[styles.pdfIcon, { backgroundColor: theme.accent + "18" }]}>
-            <Ionicons name="document-text-outline" size={28} color={theme.accent} />
-          </View>
-          <View>
-            <ThemedText type="smallBold">Pavneet_Kour_Resume.pdf</ThemedText>
-            <ThemedText type="caption" themeColor="textSecondary">
-              Mobile Developer Resume
-            </ThemedText>
-          </View>
-        </View>
-        <GradientButton label="Download" onPress={handleDownloadResume} />
       </Card>
 
       <SectionTitle title="Get In Touch" />
