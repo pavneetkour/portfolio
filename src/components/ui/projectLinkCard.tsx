@@ -5,7 +5,8 @@ import { Pressable, StyleSheet, View } from "react-native";
 import { ThemedText } from "@/components/themed-text";
 import { Radius, Spacing } from "@/constants/theme";
 import { useTheme } from "@/hooks/use-theme";
-import { Card, PillTag } from "../ui";
+import { Card } from "./card";
+import { PillTag } from "./pillTag";
 
 export function ProjectLinkCard({
   id,
