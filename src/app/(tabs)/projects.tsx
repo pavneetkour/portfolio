@@ -32,6 +32,6 @@ export default function ProjectsScreen() {
 
 const styles = StyleSheet.create({
   list: {
-    gap: Spacing.three
+    gap: Spacing.three,
   },
 });

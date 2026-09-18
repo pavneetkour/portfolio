@@ -42,24 +42,25 @@ export default function HomeScreen() {
 
 const styles = StyleSheet.create({
   hero: {
-    gap: Spacing.two, marginTop: Spacing.two
+    gap: Spacing.two,
+    marginTop: Spacing.two,
   },
   headline: {
     fontSize: 34,
     lineHeight: 40,
-    fontWeight: "700"
+    fontWeight: "700",
   },
   tagline: {
     lineHeight: 22,
-    maxWidth: 340
+    maxWidth: 340,
   },
   pills: {
     flexDirection: "row",
     flexWrap: "wrap",
-    gap: Spacing.two
+    gap: Spacing.two,
   },
   actions: {
     gap: Spacing.three,
-    marginTop: Spacing.two
+    marginTop: Spacing.two,
   },
 });

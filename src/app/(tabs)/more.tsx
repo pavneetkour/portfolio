@@ -155,44 +155,45 @@ export default function MoreScreen() {
 
 const styles = StyleSheet.create({
   timeline: {
-    gap: Spacing.two
+    gap: Spacing.two,
   },
   timelineItem: {
     flexDirection: "row",
-    gap: Spacing.three
+    gap: Spacing.three,
   },
   timelineLeft: {
     alignItems: "center",
-    width: 16
+    width: 16,
   },
   timelineDot: {
     width: 10,
-    height: 10, borderRadius: 5,
-    marginTop: 18
+    height: 10,
+    borderRadius: 5,
+    marginTop: 18,
   },
   timelineLine: {
     flex: 1,
     width: 2,
-    marginTop: 4
+    marginTop: 4,
   },
   timelineCard: {
     flex: 1,
-    marginBottom: Spacing.two
+    marginBottom: Spacing.two,
   },
   highlight: {
     lineHeight: 18,
-    marginTop: 2
+    marginTop: 2,
   },
   checklist: {
-    gap: Spacing.three
+    gap: Spacing.three,
   },
   resumeCard: {
-    gap: Spacing.three
+    gap: Spacing.three,
   },
   resumeRow: {
     flexDirection: "row",
     gap: Spacing.three,
-    alignItems: "center"
+    alignItems: "center",
   },
   pdfIcon: {
     width: 52,
@@ -203,7 +204,7 @@ const styles = StyleSheet.create({
   },
   contactCard: {
     gap: Spacing.one,
-    paddingVertical: Spacing.two
+    paddingVertical: Spacing.two,
   },
   contactRow: {
     flexDirection: "row",
@@ -220,6 +221,6 @@ const styles = StyleSheet.create({
   },
   contactText: {
     flex: 1,
-    gap: 2
+    gap: 2,
   },
 });

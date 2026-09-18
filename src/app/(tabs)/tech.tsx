@@ -61,15 +61,16 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   items: {
-    gap: Spacing.two
+    gap: Spacing.two,
   },
   itemRow: {
     flexDirection: "row",
     alignItems: "center",
-    gap: Spacing.two
+    gap: Spacing.two,
   },
   dot: {
     width: 6,
-    height: 6, borderRadius: 3
+    height: 6,
+    borderRadius: 3,
   },
 });
